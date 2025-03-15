@@ -42,4 +42,8 @@ WORKDIR /app
 
 # Copy the built application from the builder stage
 COPY --from=builder /app/build/Release/lightnvr /app/lightnvr
+RUN mkdir -p /var/lib/lightnvr
+COPY --from=builder /app/web /var/lib/lightnvr/www
+
+CMD [ "/app/lightnvr", "-c", "/etc/lightnvr.conf" ]
 

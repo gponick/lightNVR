@@ -1,2 +1,8 @@
 Dockerfile
 .github
+recordings/
+config/lightnvr.conf
+lightnvr.conf
+swap/
+build-docker.sh
+run-docker.sh
